@@ -1,3 +1,4 @@
+"use strict";
 function add(n1, n2, showResult, phrase) {
     //    if(typeof n1 !== "number"  ||  typeof n2!=="number"){
     //        throw new Error ("incorrect input !!")
@@ -26,7 +27,7 @@ var person = {
     age: 27,
     hobbies: ["football", "cooking"],
     role: [2, "author"],
-    staff: Staff.ADMIN
+    staff: Staff.ADMIN,
 };
 var favorite;
 favorite = ["sports", 2];
