@@ -7,7 +7,6 @@ const App: React.FC = () => {
     <div>
       <p>Yusuf</p>
       <TextField text="hello" person={{ firstName: "", lastName: "" }}
-      // handleChange={e => e.target.value}
       />
     </div>
   )

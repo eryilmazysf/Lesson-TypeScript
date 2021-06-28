@@ -26,13 +26,19 @@ export const TextField: React.FC<Props> = (
     // const [text, setText]=useState<{text: string}>({text:"Hello"})
     const [text, setText] = useState<TextNode>({ text: "Hello", })
     const inputRef = useRef<HTMLInputElement>(null);
-    console.log(input)
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        setInputValue(event.target.value)
+    }
+    console.log("input:", input)
+    console.log("ref:", inputRef.current?.value)
     return (
         <div>
             <input ref={inputRef}
-                onChange={(
-                    ev: React.ChangeEvent<HTMLInputElement>,
-                ): void => setInputValue(ev.target.value)} />
+                // onChange={(
+                //     ev: React.ChangeEvent<HTMLInputElement>,
+                // ): void => setInputValue(ev.target.value)} 
+                onChange={handleChange}
+            />
         </div>
     )
 }
